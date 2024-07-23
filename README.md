@@ -7,7 +7,7 @@ A repository of Scybernethics related files (texts, schemas, etc).
 - PDF format : [Scybernethic(s): existential enaction, creative cognition and technological hermeneutics, toward a second-order rationality](https://github.com/cog-data/Scybernethics/blob/main/Scybernethic(s)_%20existential%20enaction%2C%20creative%20cognition%20and%20technological%20hermeneutics%2C%20toward%20a%20second-order%20rationality.pdf)
 - MD format: [Scybernethic(s): existential enaction, creative cognition and technological hermeneutics, toward a second-order rationality](https://github.com/cog-data/Scybernethics/blob/main/Scybernethics%20-%20Existential%20enaction%2C%20Creative%20cognition%20and%20Technological%20hermeneutics%2C%20toward%20a%20second-order%20Rationality.md)
 
-(Originally at: https://scybernethics.org/scybernethics-enaction-cognitive-rationality-second-order-cybernetics/)
+(See last version at: https://scybernethics.org/scybernethics-enaction-cognitive-rationality-second-order-cybernetics/)
 
 ## Schemas
 
