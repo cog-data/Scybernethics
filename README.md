@@ -14,5 +14,5 @@ A repository of Scybernethics related files (texts, schemas, etc).
 [Schemas about Scybernethics](https://github.com/cog-data/Scybernethics/tree/main/Schemas)
 
 ## LICENSE: 
-All material in this repository, including the name "Scybernethics", are under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license.
+All material in this repository are under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license.
 Creative Commons Url: https://creativecommons.org/licenses/by-nc-nd/4.0/ 
