@@ -13,6 +13,16 @@ A repository of Scybernethics related files (texts, schemas, etc).
 
 [Schemas about Scybernethics](https://github.com/cog-data/Scybernethics/tree/main/Schemas)
 
+## Micro-Essays 
+
+[Christophe Rigon's scybernethics Micro-Essays](https://github.com/cog-data/Scybernethics/tree/main/Micro-Essays)
+
+(Originally published on X and compiled at [Treadreader](https://threadreaderapp.com/user/ki_cog)
+
+## Social Media Threads
+
+- X/Twitter: [Christophe Rigon / Soto² 🪸 - Scybernethician](https://x.com/ki_cog)
+
 ## LICENSE: 
 All material in this repository are under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license.
 Creative Commons Url: https://creativecommons.org/licenses/by-nc-nd/4.0/ 
