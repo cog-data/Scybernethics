@@ -13,6 +13,10 @@ A repository of Scybernethics related files (texts, schemas, etc).
 
 [Schemas about Scybernethics](https://github.com/cog-data/Scybernethics/tree/main/Schemas)
 
+## Meta-Thread on X
+- [Scybernethics Terminology 1](https://github.com/cog-data/Scybernethics/blob/main/Micro-Essays/ThreadReader_0_ki_cog_1789933765277425852.pdf)
+- [Scybernethics Terminology 2](https://github.com/cog-data/Scybernethics/blob/main/Micro-Essays/ThreadReader_0_ki_cog_1816432449032737118.pdf)
+
 ## Micro-Essays 
 
 [Christophe Rigon's scybernethics Micro-Essays](https://github.com/cog-data/Scybernethics/tree/main/Micro-Essays)
