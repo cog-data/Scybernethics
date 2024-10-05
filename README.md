@@ -29,9 +29,9 @@ A repository of Scybernethics related files (texts, schemas, etc).
 
 ## My online "Brain"
 
-This is a semantic n-dimensional network/mind map that I have been weaving since the beginning of the 90's, along with the enaction of my "Scybernethics" work. It has played the important role of a parallel and distributed (analogic) external memory (hypomnemata, cf. Foucault, Stiegler), to helping me tackle the hyper-complexity of my "subject". At the beginning it was mainly in French, but since then more and more in English. It contains around 30 000 items and is the result of an evolutionary process of both a top-down (learning) and a bottom-up (creative) dynamics. "Scybernethics" is its resulting acme.
+This is a semantic n-dimensional network/mind map that I have been weaving since the beginning of the 90's, along with the enaction of my "Scybernethics" work. It has played the important role of a parallel and distributed (analogic) external memory (hypomnemata, cf. Foucault, Stiegler), to helping me tackle the hyper-complexity of my "subject". At the beginning it was mainly in French, but since then more and more in English. It contains around 30 000 items and is the result of an evolutionary process of both a top-down (learning) and a bottom-up (creative) dynamics. "Scybernethics" is its resulting acme. In the pins you can find the color conventions used.
 
-Here's a link to the online version of this personal maze: https://bra.in/5jrYdQ
+Here's a link to the online and interactive version of this personal maze: https://bra.in/5jrYdQ
 
 ## LICENSE: 
 All material in this repository are under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license.
