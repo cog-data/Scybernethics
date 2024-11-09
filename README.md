@@ -33,6 +33,12 @@ This is a semantic n-dimensional network/mind map that I have been weaving since
 
 Here's a link to the online and interactive version of this personal maze: https://bra.in/5jrYdQ
 
+## Working with LLMs
+
+My Perplexity public account, about questions of interest in the deveopment of my scybernethics conception and expression (direct links also disseminated in my X/Twitter account): 
+username: soto31419705
+email: soto314@gmail.com
+
 ## LICENSE: 
 All material in this repository are under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license.
 Creative Commons Url: https://creativecommons.org/licenses/by-nc-nd/4.0/ 
