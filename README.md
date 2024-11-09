@@ -35,7 +35,7 @@ Here's a link to the online and interactive version of this personal maze: https
 
 ## Working with LLMs
 
-My Perplexity public account, about questions of interest in the deveopment of my scybernethics conception and expression (direct links also disseminated in my X/Twitter account): 
+My Perplexity public account, about questions of interest in the development of my scybernethics conception and expression (direct links also disseminated in my X/Twitter account): 
 username: soto31419705
 email: soto314@gmail.com
 
