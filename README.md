@@ -26,6 +26,7 @@ A repository of Scybernethics related files (texts, schemas, etc).
 ## Social Media Threads
 
 - X/Twitter: [Christophe Rigon / Soto² 🪸 - Scybernethician](https://x.com/ki_cog)
+- BlueSky: https://bsky.app/profile/scybernethician.bsky.social
 
 ## My online "Brain"
 
