@@ -1,5 +1,5 @@
 # Scybernethics - Toward a Second Order Rationality²
-A repository of Scybernethics related files (texts, schemas, social media archives, LLMs interactions, etc). Please bear in mind that these formalizations are my personal enactions and that their intended use is not normative but suggestive and heuristical. They are aimed at easing your meaning-making and self-transformative observational practices. Patience, analytical discrimination, and initial suspension ofjudgement are key before enacting any synthetic temporal and evolutionary formalization of the flow. This creative and de-construtive work is a never-ending comitment.
+A repository of Scybernethics related files (texts, schemas, social media archives, LLMs interactions, etc). Please bear in mind that these formalizations are my personal enactions and that their intended use is not normative but suggestive and heuristical. They are aimed at easing your meaning-making and self-transformative observational practices. Patience, rigorous analytical discrimination, and initial suspension ofjudgement are key before enacting any synthetic temporal and evolutionary formalization of the flow. This creative and de-construtive work is a never-ending comitment.
 
 ## Texts
 
