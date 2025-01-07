@@ -1,5 +1,5 @@
 # Scybernethics - Toward a Second Order Rationality²
-A repository of Scybernethics related files (texts, schemas, social media archives, LLMs interactions, etc).
+A repository of Scybernethics related files (texts, schemas, social media archives, LLMs interactions, etc). Please bear in mind that these formalizations are my personal enactions and that their intended use is not normative but suggestive and heuristical. They are aimed at easing your meaning-making and self-transformative observational practices. Patience and initial suspension of judgement are key.
 
 ## Texts
 
