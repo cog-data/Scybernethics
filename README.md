@@ -36,9 +36,11 @@ Here's a link to the online and interactive version of this personal maze: https
 
 ## Working with LLMs
 
-My Perplexity public account, about questions of interest in the development of my scybernethics conception and expression (direct links also disseminated in my X/Twitter account): 
+- YT LLM Podcast channel: https://www.youtube.com/@Scybernethics
+
+- My Perplexity public account, about questions of interest in the development of my scybernethics conception and expression (direct links also disseminated in my X/Twitter account): 
 username: soto31419705
-email: soto314@gmail.com
+
 
 ## LICENSE: 
 All material in this repository are under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license.
