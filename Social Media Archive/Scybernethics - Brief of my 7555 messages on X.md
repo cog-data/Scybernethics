@@ -43,7 +43,7 @@ This document analyzes a series of messages from "X_soto_messages.txt," revealin
 
   - **Mecanizing the Mind:** There's a recurring concern about the mechanization of the mind. The messages ask, "to what extend _our own minds_, historically and socially, are on the long term _mecanized_ by this deep epistemological trend?!" The use of technology, especially large language models (LLMs) and "Big Data," is seen as a potential source of this mechanization. He also criticizes the "massive instrumentalization of people's inner cognitive behaviors by private interests" related to ML and DS.
 
-  - **Turing-Von Neumann Gesture:** Soto² sees the Turing-Von Neumann approach as a "double cut": "the cut to meaning, which is reduced, and the cut to matter, which is abstract." This reduction of meaning and abstraction of matter is viewed as problematic.
+  - **Shannon-Turing-Von Neumann Gesture:** Soto² sees the Shannon-Turing-Von Neumann approach as a "double cut": "the cut to meaning, which is reduced, and the cut to matter, which is abstract." This reduction of meaning and abstraction of matter is viewed as problematic.
 
   
 - **Emphasis on Phenomenology and Embodiment:**
@@ -77,7 +77,7 @@ This document analyzes a series of messages from "X_soto_messages.txt," revealin
   
 - **Real Epistemology (3P-1P):** Soto² calls for a "Real Epistemology" that includes both 3rd-person and 1st-person perspectives, highlighting his dissatisfaction with purely objective and reductionist approaches in science.
 
-  
+
 - **Exploration of Paradox and Ambiguity:**
 
   - **Groundless Ground:** Soto² often grapples with the idea of a "groundless ground" of sense-making, a concept that seems to be linked to Buddhist philosophy. He sees this as an important point in the study of sense-making.
