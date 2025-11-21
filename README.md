@@ -1,5 +1,7 @@
 # Scybernethics - Toward a Second Order Rationality²
-A repository of Scybernethics related files (texts, schemas, social media archives, LLMs interactions, etc). Please bear in mind that these formalizations are my personal enactions and that their intended use is not normative but suggestive and heuristical. They are the formalized results of a lifetime rafinement in studying sciences and technologies of cognition coupled with phenomenological inquiry. They are ethically aimed at easing your meaning-making and self-transformative observational practices. Patience, rigorous analytical discrimination, and initial suspension of judgement are key before enacting any synthetic temporal and evolutionary formalization of the flow. This creative (bottom-up/top-down, in-tuition, transduction process --> form) and de-constructive (under-standing, meaning-making, transduction form --> process) work is a never-ending comitment: no final destination but progessive convergences (horizons). Living is meaning-making. Enjoy the weaving journey! 💜
+A repository of Scybernethics related files (texts, schemas, social media archives, LLMs interactions, etc). Please bear in mind that these formalizations are my personal enactions and that their intended use is not normative but suggestive and heuristical. They are the formalized results of a lifetime rafinement in studying sciences and technologies of cognition coupled with phenomenological inquiry. They are ethically aimed at easing your meaning-making and self-transformative observational practices. Patience, rigorous analytical discrimination, and initial suspension of judgement are key before enacting any synthetic temporal and evolutionary formalization of the flow. This creative (bottom-up/top-down, in-tuition, transduction process --> form) and de-constructive (under-standing, meaning-making, transduction form --> process) work is a never-ending comitment: no final destination but progessive convergences (horizons). Living is meaning-making, knowing is being and all knowing is doing. Enjoy the weaving journey! 💜
+
+N.B.: This repository is not only a backup and a passive memory but also a facility to easily download it to feed a LLM/AI. 
 
 ## Texts
 
@@ -12,6 +14,9 @@ A repository of Scybernethics related files (texts, schemas, social media archiv
 ## Schemas
 
 [Schemas about Scybernethics](https://github.com/cog-data/Scybernethics/tree/main/Schemas)
+
+## Blog Articles
+A all-in-one backup, in XML format, of my blog articles published on my Scybernethics.org website.
 
 ## Meta-Threads
 - [Scybernethics Terminology 1](https://github.com/cog-data/Scybernethics/blob/main/Micro-Essays/ThreadReader_0_ki_cog_1789933765277425852.pdf)
