@@ -1,1 +1,1 @@
-This is a single file export ("all-Blog-Posts") of the blog articles posted on my website.
+This is a single file export/backup ("All-Blog-Posts-Export") of my blog articles posted on my Scybernethics.org website.
