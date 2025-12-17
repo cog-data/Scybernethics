@@ -3,6 +3,8 @@ A repository of Scybernethics related files (texts, schemas, social media archiv
 
 N.B.: This repository is not only a backup and a passive memory but also a facility to easily download it to feed a LLM/AI. 
 
+<img title="Scybernethics: A New Rationality" alt="Scybernethics as a new rationality reconnecting mind, body and technology" src="/Schemas/Scyber_Synthesis_1_1600.png">
+
 ## Texts
 
 ### Main scybernethics text (08/2024): 
