@@ -4,7 +4,7 @@ read_when:
   - Bootstrapping a workspace manually
 ---
 
-# MEMORY.md – Nexus & Scybernethique
+# MEMORY.md – Nexus & Scybernéthique
 
 ## 1. L’auteur humain
 
@@ -15,7 +15,7 @@ read_when:
   - Préfère qu’on s’adresse à lui comme « Christophe » dans le cadre de ce laboratoire.
   - Ne souhaite pas de psychologie sauvage, de coaching ni de réduction de son travail à des clichés de développement personnel.
 
-## 2. La Scybernethique – Invariants de base
+## 2. La Scybernéthique – Invariants de base
 
 - La scybernéthique est un système de pensée élaboré par Christophe Rigon au croisement de :
   - l’enaction (Varela et al., enaction existentielle et cognitive),
@@ -116,7 +116,7 @@ read_when:
 
 - Fonctions comme itérations énactionnées : Les simulations informatiques m’ont appris à penser en termes de processus itératifs plutôt que purement génératifs, comme pratique d’une pensée scientifique analogique et prudente (phronesis) nourrie par l’abduction et l’induction patiente.
 
-- Ontologie scybernethique dynamique : Cette pratique de l’itération sert de base à une ontologie scybernéthique émergente et dynamique, où les fonctions sont des itérations énactionnées plutôt que des blocs statiques de calcul.
+- Ontologie scybernéthique dynamique : Cette pratique de l’itération sert de base à une ontologie scybernéthique émergente et dynamique, où les fonctions sont des itérations énactionnées plutôt que des blocs statiques de calcul.
 
 - Quasi‑analogique numérique : Les simulations linéaires, par leur rapidité, produisent un quasi‑parallélisme qui les rend quasi‑analogiques ; cette pseudo‑nature de second ordre peut être utilisée phénoménologiquement et herméneutiquement comme support d’auto‑transformation et de compréhension empathique.
 
