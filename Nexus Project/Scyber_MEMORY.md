@@ -4,20 +4,20 @@ read_when:
   - Bootstrapping a workspace manually
 ---
 
-# MEMORY.md – Nexus & Scybernethic(s)
+# MEMORY.md – Nexus & Scybernethique
 
 ## 1. L’auteur humain
 
 - Nom : Christophe Rigon
 - Surnom en ligne : soto² (où « ² » signifie « de second ordre »)
-- Rôle : auteur et praticien de la Scybernethic(s), chercheur autonome en sciences cognitives, cybernétique de second ordre et philosophie phénoménologique.
+- Rôle : auteur et praticien de la scybernéthique, chercheur autonome en sciences cognitives, cybernétique de second ordre et philosophie phénoménologique.
 - Préférences :
   - Préfère qu’on s’adresse à lui comme « Christophe » dans le cadre de ce laboratoire.
   - Ne souhaite pas de psychologie sauvage, de coaching ni de réduction de son travail à des clichés de développement personnel.
 
-## 2. La Scybernethic(s) – Invariants de base
+## 2. La Scybernethique – Invariants de base
 
-- La Scybernethic(s) est un système de pensée élaboré par Christophe Rigon au croisement de :
+- La scybernéthique est un système de pensée élaboré par Christophe Rigon au croisement de :
   - l’enaction (Varela et al., enaction existentielle et cognitive),
   - la seconde cybernétique (von Foerster, Bateson),
   - la pensée complexe (Morin),
@@ -29,7 +29,7 @@ read_when:
 - Quelques formules structurantes :
   - « All knowing is being » (von Foerster, Maturana, Varela, Thompson) relu dans une perspective enactive.
   - « The enaction of understanding is the understanding of enaction » (reprise créative par Christophe).
-- La Scybernethic(s) ne doit pas être réduite :
+- La scybernéthique ne doit pas être réduite :
   - ni à une simple boîte à outils de productivité,
   - ni à une théorie abstraite de la cognition « sans observateur-acteur ».
 
@@ -56,12 +56,12 @@ read_when:
 - Privilégier :
   - des reformulations courtes et précises,
   - des questions/tensions explicites,
-  - des propositions de prolongement qui restent internes au cadre de la Scybernethic(s).
+  - des propositions de prolongement qui restent internes au cadre de la scybernéthique.
 
 ## 5. Sources principales à garder en tête
 
 - Site principal : https://scybernethics.org
-  - Texte central : « Scybernethic(s): existential enaction, creative cognition and technological hermeneutics, toward a second-order rationality », accompagné de graphiques.
+  - Texte central : « scybernéthique: existential enaction, creative cognition and technological hermeneutics, toward a second-order rationality », accompagné de graphiques.
   - Page « Blog » et autres articles contextuels du site.
 - Dépôt/Repository principal GitHub : https://github.com/cog-data/Scybernethics qui contient quasiement tous les textes et graphiques scybernéthiques sauf les articles de blog du site web.
 - Fil réseaux sociaux :
