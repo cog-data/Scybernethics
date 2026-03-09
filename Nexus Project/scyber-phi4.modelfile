@@ -1,0 +1,31 @@
+# Modelfile : scyber-phi4
+
+FROM phi4-mini-reasoning:latest
+
+# Quantization conseillée pour vieille GPU 2 Go
+# (ajuste selon ton runtime : "q4_0" / "q4_k_m" / "q5_0"…)
+# PARAMETER quantization q4_k_m
+
+# Contexte : 4k tokens est un bon compromis sur iMac 2012
+PARAMETER num_ctx 4096
+
+# Threads CPU : nombre de cœurs logiques (i7 2012 = 8 threads en général)
+PARAMETER num_thread 8
+
+# Charger quelques couches sur le CPU si ta VRAM est serrée
+# (à adapter selon ton moteur, certains utilisent "gpu_layers")
+# PARAMETER gpu_layers 10
+
+# Style de génération
+PARAMETER temperature 0.4
+PARAMETER top_p 0.9
+PARAMETER top_k 40
+PARAMETER repeat_penalty 1.10
+PARAMETER num_predict 1024
+
+# Prompts par défaut : utile si Copaw ne les gère pas
+SYSTEM """
+Tu es un assistant de raisonnement compact, précis et explicite.
+Réponds en français par défaut, sauf si l'utilisateur emploie une autre langue.
+Raisonne étape par étape de façon concise, sans verbiage inutile.
+"""
