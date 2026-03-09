@@ -49,6 +49,8 @@ Here's a link to the online and interactive version of this personal maze: https
 - My Perplexity public account, about questions of interest in the development of my scybernethics conception and expression (direct links also disseminated in my X/Twitter account): 
 username: soto31419705
 
+- Beginning of the "Nexus Project", to create a scybernethics assistant/(multi)agent. 
+
 
 ## LICENSE: 
 All material in this repository are under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license.
