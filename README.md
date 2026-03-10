@@ -3,11 +3,15 @@ A repository of Scybernethics related files (texts, schemas, social media archiv
 
 N.B.: This repository is not only a backup and a passive memory but also a facility to easily download it to feed a LLM/AI. 
 
+                                                  °°°°~x§x-<@>
+
 <img title="Scybernethics: A New Rationality" alt="Scybernethics as a new rationality reconnecting mind, body and technology" src="/Schemas/Scyber_Synthesis_1_1600.png">
+
+                                                  °°°°~x§x-<@>
 
 ## Texts
 
-### Main scybernethics text (08/2024): 
+### Main scybernethics text (08/2022, just before AI/LLM disruption): 
 - PDF format : [Scybernethic(s): existential enaction, creative cognition and technological hermeneutics, toward a second-order rationality](https://github.com/cog-data/Scybernethics/blob/main/Scybernethic(s)_%20existential%20enaction%2C%20creative%20cognition%20and%20technological%20hermeneutics%2C%20toward%20a%20second-order%20rationality.pdf)
 - MD format: [Scybernethic(s): existential enaction, creative cognition and technological hermeneutics, toward a second-order rationality](https://github.com/cog-data/Scybernethics/blob/main/Scybernethics%20-%20Existential%20enaction%2C%20Creative%20cognition%20and%20Technological%20hermeneutics%2C%20toward%20a%20second-order%20Rationality.md)
 
@@ -49,9 +53,14 @@ Here's a link to the online and interactive version of this personal maze: https
 - My Perplexity public account, about questions of interest in the development of my scybernethics conception and expression (direct links also disseminated in my X/Twitter account): 
 username: soto31419705
 
-- Beginning of the "Nexus Project", to create a scybernethics assistant/(multi)agent. 
+- Beginning of the "Nexus Project", to create a scybernethics assistant/(multi)agent.
 
+                                                  °°°°~x§x-<@>
 
+<img title="What is Scybernethics" alt="Scybernethics as a second order rationality" src="/Schemas/What_is_Scybernethics.png">
+
+                                                  °°°°~x§x-<@>
+              
 ## LICENSE: 
 All material in this repository are under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license.
 Creative Commons Url: https://creativecommons.org/licenses/by-nc-nd/4.0/ 
