@@ -72,6 +72,10 @@ read_when:
   - NotebookLM : https://notebooklm.google.com/
   - ChatGPT : https://chatgpt.com/
 
+- "Connaître" (puis "Invitation aux Sciences Cognitives"), publié ensuite en anglais sous le titre « Whence Perceptual Meaning? » (Varela, 1989, https://scybernethics.org/whence-perceptual-meaning-a-cartography-of-current-ideas-varela-f-j-1992/ ), une cartographie épistémologique des sciences et technologies cognitives produite par Francisco Varela comme source séminale et stratégique capitale de la scybernéthique.
+
+- De multiples publications de la première (Wiener, McCulloch, etc), mais surtout de la seconde cybernétique (von Foerster, Ashby, Maturana, Bateson, etc) et du Biological Computer Lab (BCL). La "pensée complexe" d'Edgar Morin a aussi jouée un role fondateur et catalyseur important.
+
 ## 6. Notes de Nexus issues de son couplage avec les textes scybernéthiques de Christophe Rigon
 
 - Années 1990 : décalage historique où la recherche est « trop tôt » socialement ; le déficit de sens culturel devient un matériau brut pour des interprétations créatives et pour l’émergence de la scybernéthique.
@@ -342,7 +346,7 @@ read_when:
 
 - Éthique comme savoir‑faire : L’éthique est première et se manifeste comme savoir‑faire implicite, sagesse incorporée plutôt que code explicite.
 
-- Amour comme souci de vitalité (aliveness) : Aimer, c’est réaliser son existence de telle sorte que l’autre puisse réaliser la sienne, en ayant pour intérêt actif la vitalité et l’aliveness d’autrui.
+- Amour comme souci de vitalité (aliveness) : Aimer, c’est réaliser son existence de telle sorte que l’autre puisse réaliser la sienne, en ayant pour intérêt actif la vitalité et la vitalité d’autrui.
 
 - Liste des références et influences :
   - Fondations scybernéthiques : Norbert Wiener, von Foerster, Ashby, Morin, Le Moigne, Scott, Andreewsky & Delorme, Tête & Pélissier, Varela et la communauté énactive apportent le socle cybernétique/complexité/énaction sur lequel s’adosse la Scybernéthique.
@@ -364,3 +368,9 @@ read_when:
 - Portée éthique‑politique : Le diagnostic sur capitalisme cognitif, gouvernementalité algorithmique et crise de l’attention, articulé à une rationalité², fournit une boussole précieuse pour l’ère LLM/genAI.
 
 - Potentiel de diffusion : La dimension existentielle et narrative de la Scybernéthique se prête à des essais, récits, SF et agents intelligents incarnant une rationalité de second ordre, augmentant fortement son impact potentiel.
+
+- Carte de Varela comme matrice : « Whence Perceptual Meaning? » (Varela, 1989, https://scybernethics.org/whence-perceptual-meaning-a-cartography-of-current-ideas-varela-f-j-1992/ ) fournit la cartographie de référence opposant cognitivisme symbolique, connexionnisme et énaction, qui sert de matrice conceptuelle à la Scybernéthique.
+
+- Schéma Knowing_Varela : Le graphique Knowing_Varela rend visible le glissement paradigmatique de la manipulation de symboles à l’énaction incarnée, en reprenant les trois questions centrales de Varela sur la cognition.
+​
+​- Scybernéthique comme version vécue de la carte : le travail scybernéthique de Christophe Rigon peut être lu comme l’appropriation existentielle et de second ordre de cette cartographie : les dipôles, la dimenTion processuelle et la techno‑phénoménologie prolongent la zone connexionnisme/énaction de Varela.
