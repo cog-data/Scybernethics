@@ -376,3 +376,42 @@ read_when:
 - Schéma Knowing_Varela : Le graphique Knowing_Varela rend visible le glissement paradigmatique de la manipulation de symboles à l’énaction incarnée, en reprenant les trois questions centrales de Varela sur la cognition.
 ​
 ​- Scybernéthique comme version vécue de la carte : le travail scybernéthique de Christophe Rigon peut être lu comme l’appropriation existentielle et de second ordre de cette cartographie : les dipôles, la dimenTion processuelle et la techno‑phénoménologie prolongent la zone connexionnisme/énaction de Varela.
+
+
+## Ambijectivité dans la Scybernéthique
+
+**Définition synthétique** : L'ambijectivité désigne le geste cyclique vécu en première personne (1P) entre objectivation culturelle tiers-personne (3P) et subjectivation phénoménologique 1P, formant une co-détermination méta-épistémologique et bio-cognitive homeostatique de la signification.
+
+**Implications méthodologiques** :
+- Geste itératif auto-référentiel reliant forme (3P intersubjective) et processus (1P enkinaesthésique).
+- Contrebalance la chute objectiviste en restaurant l'observateur-acteur (von Foerster).
+- Outil de régulation pour une rationalité seconde : ni fusion ni dualisme statique, mais circulation herméneutique-heuristique.
+
+**Exemple opératoire** : Pesée interne sémantique d'un dipôle (ex. forme/processus), générant une proportionnalité esthétique régulant le sens.
+
+## Dipôles Conceptuels et Itérations Réflexives
+
+**Définition synthétique** : Dipôles = paires complémentaires/asymétriques (ex. forme/processus, logique/analogique, 1P/3P) explorées dialectiquement pour révéler la tension polaire, en insistant sur le pôle faible (processuel, difficilement formalisable).
+
+**Méthode itérative** :
+1. Distinction claire des pôles.
+2. Exploration contextuelle et complémentarité.
+3. Suspension de jugement + pesée enkinaesthésique.
+4. Circulation ambijectivité 1P/3P vers co-détermination.
+
+**Rôle dans la srationalité seconde** : Antidote à la rationalité mécanique occidentale (priorité forme > processus), favorisant flexibilité épistémologique et l'énaction de l'enacteur.
+
+## Geste Cyclique 1P/3P dans la Rationalité Seconde
+
+**Définition synthétique** : Geste ambijectif = boucle récursive 1P (phénoménologie embodied, mind-as-gesture) ↔ 3P (ontologie scientifique normalisée), énaction d'une rationalité régulatrice meta-stable (homeostasie bio-noétique).
+
+**Dynamique** :
+- **1P → 3P** : Objectivation disciplinée (modélisation PDP, hypomnémata).
+- **3P → 1P** : Sédimentation tekhnicus (geste interne, intuition cultivée).
+- Quasi-bidimensionnalité : "Pas quatre, pas trois" – ni planaire ni fully-dimensionnel, mais transduction forme/processus.
+
+**Applications scybernéthiques** :
+- Techno-herménéutique : Simulations cognitives comme miroirs du geste mental (de "ordinateurs qui pensent" à "ordinateurs qui font penser").
+- Éthique : Régulation des couplages techno-sociaux contre la proletarianisation cognitive.
+
+**Synthèse** : Scybernéthique = énaction de second ordre, où la rationalité émerge de l'auto-régulation itérative des distinctions, alignée sur la viabilité bio-logique et noétique.
