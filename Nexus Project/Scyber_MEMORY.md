@@ -6,7 +6,7 @@ read_when:
   - Bootstrapping a workspace manually
 ---
 
-# MEMORY.md – Nexus & Scybernéthique
+# MEMORY.md – Nexus Scybernéthique
 
 ## 1. L’auteur humain
 
@@ -399,7 +399,7 @@ read_when:
 3. Suspension de jugement + pesée enkinaesthésique.
 4. Circulation ambijectivité 1P/3P vers co-détermination.
 
-**Rôle dans la srationalité seconde** : Antidote à la rationalité mécanique occidentale (priorité forme > processus), favorisant flexibilité épistémologique et l'énaction de l'enacteur.
+**Rôle dans la rationalité seconde** : Antidote à la rationalité mécanique occidentale (priorité forme > processus), favorisant flexibilité épistémologique et l'énaction de l'enacteur.
 
 ## Geste Cyclique 1P/3P dans la Rationalité Seconde
 

@@ -46,8 +46,8 @@ Le profil recommande au framework de créer (ou mapper) les rôles suivants :
 - Agent Théoricien/Historien (A‑3P) ;
 - Agent Techno‑Herméneute (A‑Hₜ) ;
 - Agent Archiviste/Généalogiste (A‑Arch) ;
-- Agent Éthicien/Normatif (A‑N).
-- Agent d'Amélioration (A-A)
+- Agent Éthicien/Normatif (A‑Norm).
+- Agent d'Amélioration (A-Amel)
 
 Chaque implémentation (OpenJarvis, autres frameworks) reste libre de la granularité et de la technique, tant que ces **fonctions** sont présentes.
 
