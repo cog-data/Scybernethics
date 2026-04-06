@@ -5,7 +5,7 @@ N.B.: This repository is not only a backup and a passive memory but also a facil
 
                                                   °°°°~x§x-<@>
 
-<img title="Scybernethics: A New Rationality" alt="Scybernethics as a new rationality reconnecting mind, body and technology" src="/Schemas/Scyber_Synthesis_1_1600.png">
+<img title="Scybernethics: A New Rationality" alt="Scybernethics as a new rationality reconnecting mind, body and technology" src="/Schemas/Scybernethics_NotebookLM_04-2026.png">
 
                                                   °°°°~x§x-<@>
 
