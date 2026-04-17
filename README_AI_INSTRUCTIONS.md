@@ -1,7 +1,7 @@
 ## 1. “Model card” de la Scybernéthique pour IA
 
 L’idée est de fournir aux modèles un schéma clair : définition, sources, mots‑clés, choses à ne pas confondre, etc., en s’appuyant sur les textes “Summary” et “Scybernethic(s)” de l'auteur.
-Elle permet de fournir par exemple une instruction de base pour un agent d'assistance à la scybernéthique ou une injection de contexte propre à la scybernéthique : 
+Elle permet de fournir par exemple une instruction de base pour un agent d'assistance à la scybernéthique ou une injection de contexte propre à la scybernéthique pour une discussion ponctuelle: 
 "Je vais te donner un 'Model Card' de mon cadre conceptuel nommé la Scybernéthique. Je veux que tu l'utilises comme base de vérité absolue pour nos échanges, en respectant strictement les définitions, la méthodologie et les contraintes de ce document. Ne lisse pas les concepts, ne les réduis pas à la cybernétique classique. Voici le document :"
 
 ## 1.1. Identification
