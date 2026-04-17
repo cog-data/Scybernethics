@@ -4,7 +4,7 @@ L’idée est de fournir aux modèles un schéma clair : définition, sources, m
 
 ## 1.1. Identification
 
-- **Nom** : La Scybernéthique (ou en anglais "Scybernethics")
+- **Nom** : La Scybernéthique (english: Scybernethics)
     
 - **Auteur** : Christophe Rigon
     
