@@ -1,13 +1,15 @@
 ---
 Project: Scybernethics
----
-
+Type: Texte fondateur
+Maturité: Établi
+Last_MAJ: 09-06-2026
+Created: 22-09-2023
 ---
 
 Tags: #Scybernethics #MainText
 Up: [[Scybernethics Web Site]] [[@ Scybernethics Projects - Main ⭐️]]
-X: [[Whence Perceptual Meaning - Varela - 1992]]  [[What is Scybernethics]] 
-Created: 22-09-2023 11:19
+X: [[Whence Perceptual Meaning - Varela - 1992]]  [[What is Scybernethics]]
+PDF: `7 - UTILS/Pdf/Pdf-SC/Scybernethics/Scybernethics - Existential enaction, Creative cognition and Technological hermeneutics, toward a second-order Rationality.pdf`
 
 ---
 
@@ -28,7 +30,9 @@ v.1.3 17/12/2022
 
 °°°°~x§x-<@>
 
-[![Scybernethics second-order rationality](https://scybernethics.org/wp-content/uploads/2023/07/2d_Order_Rationality_2_1200-1024x901.png)](https://scybernethics.org/wp-content/uploads/2023/07/2d_Order_Rationality_2_1200.png)
+[![Prototypical Experiential Device](Schemas/Prototypical_Experiential_Device_mod1_1500.png)](Schemas/Prototypical_Experiential_Device_mod1_1500.png)
+
+[![Scybernethics second-order rationality](Schemas/2d_Order_Rationality.png)](Schemas/2d_Order_Rationality.png)
 
 °°°°~x§x-<@>
 
@@ -101,7 +105,7 @@ v.1.3 17/12/2022
 - While trying to rationalize it, I have found that **dual-process theories of the mind** are ubiquitous in psychology. An example in the study ot attention and working memory: "Despite their differences, dual-process theories share the common idea that thoughts, behaviors, and feelings result from the interaction between exogenous and endogenous forms of attention. Both types of attention can be applied to representations to increase or decrease their level of activation." ([Individual Differences in Working Memory Capacity and Dual-Process Theories of the Mind](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1351135/), Barrett & Tugade, Psychol Bull. 2004 Jul; 130(4): 553–573.)  
     
 
-[![Scybernethics second-order rationality](https://scybernethics.org/wp-content/uploads/2023/07/2d_Order_Rationality_2_1200-1024x901.png)](https://scybernethics.org/wp-content/uploads/2023/07/2d_Order_Rationality_2_1200.png)
+[![Scybernethics second-order rationality](Schemas/2d_Order_Rationality.png)](Schemas/2d_Order_Rationality.png)
 
 - Understanding this, one can tackle with the second-order cybernetics, and understand why von Foerster has had such an important influence on the conception of “**enaction**” and on the radical constructivist movement (von Glasersfeld, Watzlawick). To note: the double aspect of the second-order distinction(s) is not obvious in english, which is more pragmatically oriented, as “**observing systems**” mean at the same time “system which observe” (third person point of view) AND the act itself of “observing” by the observer. Both are to be considered and distinguished. It is, from my (continental) understanding, typical “meaningful ambiguities” that Heinz von Foerster liked to cleverly sow.
 - We will see later that this is just the formal side of my process, which will be then **complemented with a processual side** (deepening the “observing” polarity) by the mean of an hermeneutical / heuristical cycle with (reflexive) computer simulations of a-cognition. Presenting both sides at the same time would not have been palatable.
@@ -149,12 +153,12 @@ From my position, and most of the time, any educated person say something intere
 - I should thanks Bernard Stiegler, and all the simondon’s inspired scholars (Compiègne school of enaction, B. Bachimond, J.H. Barthélemy, etc) for providing me philosophical tools to help me think and mainly express my own experience of the technical dimension (Tekhne). **Thinking of the technics and of the technology** is an important **blind spot of science and philosophy** (Havelange 2005), caught in a cultural double bind between being often seen as secondary by philosophy and as negligible neutral mediative tools in science. But we should beware as, in a certain sense, the medium could also be the message (Mc Luhan). There is something important to think here, or we may well collectively attend a returned of the repressed in an Heideggerians Gestell (“the boarding of technics”) style. Consciousness and understanding are nowadays paramount.
 - I have personally developed my modelization skills by first trying to understand biology, leading me to systemics (Berthalanffy, De Rosnay), and later to **cybernetics and complex models** (Le Moigne, Vallée). For me model-space is a “neutral” and “free” formal space, meaning a holistic (but not reduced to) polarized view driven toward my own understanding. In a similar fashion, computer simulations, as I am also a programmer, were seen and used as an heuristical **functional “modeling clay”**, driven not so much toward the realization of a golem, but toward mine.
 
-[![](https://scybernethics.org/wp-content/uploads/2023/06/Processual_Learning-1024x863.png)](https://scybernethics.org/wp-content/uploads/2023/06/Processual_Learning.png)
+[![Processual learning while interacting with A-Cognition simulations.](Schemas/Experimental-Experiential_Epistemology_1200.png)](Schemas/Experimental-Experiential_Epistemology_1200.png)
 
 - This leads me to consider models and computer simulations as experimental and experiential tools, in the same interpretative way that I see theories as attentional grids for empirical experiments. Like Michel Bitbol (Bitbol 1998), I thought that there is a cyclic scientific co-determination of the theoretics with it’s attentional object and methodology. That is to say that, for me, models and simulating artificial cognition is also doing **experiential and “experimental epistemology”** (McCulloch, Varela), or “applied epistemology” to myself. Here epistemology is not only seen as theory and history of knowledge, but also and mainly as a **theory and history of knowledge acquisition** (von Foerster). “(...) _culture is not a thing, or a collection of things, it is a process_” (Hutchin 1990: 5). For a more detailed view about using models and computer simulations as experimental and experiential epistemology see for example (Beslon 2008). “_The decisive thing with modeling is not the model per se, but what the model and working with the model does to our mind_” - (Grimm 1999) cited in (ibid). See also (Sigaud 2002).
 - The smart "**From computers which think to computers which make me think**" in my title is from (Bachimond 1996).
 
-[![](https://scybernethics.org/wp-content/uploads/2023/02/hermeneutic_circle_s.jpg)](https://scybernethics.org/wp-content/uploads/2023/02/hermeneutic_circle_s.jpg)
+[![](Schemas/hermeneutic_circle_s.jpg)](Schemas/hermeneutic_circle_s.jpg)
 
 The classical Hermeneutic Circle of Modelization
 
@@ -177,7 +181,7 @@ A preceding proposal in the enactive field has yet been made for an Hegelian ins
 - It is interesting because, as I could not read Varela’s “**Not one, not two**” (Varela, Bitbol 2017: 73) until recently, I have had to develop my own creative pathway to cope with these gordian knots, **more on the existential side** then Varela’s toward-science expression, but complementary. So the reader should note the differences between my definition and Varela’s definitions of his dualities (”the it” / “the process leading to it”, leading him to the star statement).
 - Bateson has also used the slash notation, but in another context (Bateson 2008).
 
-[![conceptual dipole and quasi-double distinction](https://scybernethics.org/wp-content/uploads/2023/06/dipole.png)](https://scybernethics.org/wp-content/uploads/2023/06/dipole.png)
+[![conceptual dipole and quasi-double distinction](Schemas/dipole.png)](Schemas/dipole.png)
 
 The Conceptual Dipole & the Quasi-double Distinction.
 
@@ -195,7 +199,7 @@ The Conceptual Dipole & the Quasi-double Distinction.
 
 ### 3.4.4 A systematical logic of knowledge exploration: in search for invariants, prototypical scheme and correlations
 
-[![](https://scybernethics.org/wp-content/uploads/2023/07/Systematic_Knowledge_Exploration_1200_En-2-1024x713.png)](https://scybernethics.org/wp-content/uploads/2023/07/Systematic_Knowledge_Exploration_1200_En-2.png)
+[![](Schemas/Systematic_Knowledge_Exploration_1200_En-2.png)](Schemas/Systematic_Knowledge_Exploration_1200_En-2.png)
 
 - I have found in (Morin 1986) a method he called “dialogic” that I have interpreted as a systematic method about exploring a conceptual dipole, i.e. a **logic of exploration**, which is for me an “**exploratory dialectical dialogic**”. It is very simple: it consist, at first, to understand the two concepts distinctively (A and not-B, B and not-A) and then together to see their complementarity (A and B), but also their contexts (not (A and B) / not-A and not-B). It could be compared with the logical OR, XOR (eXcluded or), AND functions in computer programming logic.
 - Then the new generated conception should be **checked against the valid scholar knowledge**. The objective is to enact a valid meta-perspective linked to our sense-making, that is a point of view which can generate a general understanding of both of the terms of the dipole, but also a partial understanding of the historical, theoretical and implicit socio-political contexts.
@@ -206,18 +210,23 @@ The Conceptual Dipole & the Quasi-double Distinction.
 
 * For myself, in french, I have called this intimate understanding process “panser” (i put my hand just under the solar plexus), with a double sense of “thinking” (penser) homeostatically with my “digestive organs” and taking care. May be it could be linked to the recent discovery of our Enterical Neural System (ENS) as a “third brain” (after the cerebrum and the cerebellum)?! I bet that a neurophenomenology of the guts should lead to very interesting results.
 
+[![](Schemas/Dia-Logical-Dialectics.jpg)](Schemas/Dia-Logical-Dialectics.jpg)
+
 - Phenomenologically I can describe this experience as an **aesthetic feeling of resolution** coupled with **kinaesthetic schemes** (in-tuition, in-formation) (Piaget, Husserl, James). Being patient and aiming for diversity lead to a more and more robust and stabilized (enacted) understanding representations and stabilized know-how. Gradually the reasonings begin to be like dances in space, delivering their own trajectory and you can feel their idiosyncratic style, their mental gesture and postures, their abstract behavior. I suppose that this is a trivial phenomenological experience for trained critical thinkers, I am just making it explicit and conscious.
 - This praxis is coherent (and not at all identical, more as a complementary negative) with the “coupling” and “imaginary” constitutive dimensions described by Varela from a “within” third person point of view: “Thus **the term cognitive has two constitutive dimensions**: first its _coupling_ dimension, that is, a link with its environment allowing for its continuity as individual entity; second- by a slight misuse of language, I admit- its _imaginary_ dimension, that is, the surplus of significance a physical interaction acquires due to the perspective provided by the global action of the organism.”(Varela 1991: 86-87).
 - So I have myself densely accumulated these differences and similarities in many disciplinary domains. And soon it appear to me that I was overwhelmed and that I could not memorize no more all these concepts and conceptual dipoles, and that my synthetic systemic models on paper were much too complex as time goes on. I was faced with my own complexity limit and I needed a representational tool, **a memory prosthesis to augment myself** (Engelbart), which later I have also understood as an hypomnemata, a self reflecting writing tool.
 
 # 4. Prototypical experiential device
 
-[![Scybernethics typical device linking scientific epistemological culture with cognitive technologies, reticular self-writing and the human community](https://scybernethics.org/wp-content/uploads/2023/06/rototypical_Experiential_Device_web_2.png)](https://scybernethics.org/wp-content/uploads/2023/06/rototypical_Experiential_Device_web_2.png)
+[![Scybernethics typical device linking scientific epistemological culture with cognitive technologies, reticular self-writing and the human community](Schemas/rototypical_Experiential_Device_web_2.png)](Schemas/rototypical_Experiential_Device_web_2.png)
 
 ## 4.1 My “Brain” and designing a reflexive genetic / generated ontology: a first person enactive style of representing
 
 - The reader should have yet understood: my “brain” is just what is called today a **mind-mapping tool** (also named technically “semantic nets” in cognitivist cognitive psychology). But I did not want to be constrained by the 2D dimensionality of these tools, like with my good old fashion pen and paper. I was forced to finally choose a commercial product that offer this possibility, that is creating an abstract net of items (concepts, dipole, themes, citations, references, persons, links, etc) which are locally represented in a 2D hierarchical fashion (item, parent, children, adjacent) but also with the possibility to make free relational links between any items of the net, so that the global emerging structure would **not be dimensionality constrained**. A kind of special and personal “intranet” if you like, or more scholarly as a mereotopology (Livet speaking of Whitehead’s notion of event in (Livet 2008)). I was also looking for a representational application that put the drive on the **context** of each item, as meaning and creative thinking are hihly context-dependant.
 - This “brain” actually contain around twenty height thousands items, organized in a way that I think nobody could easily decipher, except me, as it is the trace of a double movement: a **top-down** classical disciplinary normative learning ontology, **with a bottom-up iteratively enacted**, creative and reflexive ontology, the trace of a **technically and “socially extended mind”** (Gallagher) which acme is the “scybernethics”. It has what McCulloch called an “_heterarchical_” organization (McCulloch 1945).
+
+[![](Schemas/Screenshot-2024-05-18-at-09.11.44.png)](Schemas/Screenshot-2024-05-18-at-09.11.44.png)
+
 - It could be [seen and explored online now](https://bra.in/7qzdbb) (mix english / french). To navigate through it one must click on an item, and it will replace the preceding in the middle of the screen. You should be a little patient because this online version is a bit slow and my top categories, as they are nexus, are very saturated. I recommend to tile the screen horizontally (circle arrows, center, down). There is a search engine integrated to search for keywords (concepts, persons, etc), and in the top left you will find a pinned “thought” called “Colors conventions” embedding a short explanation about my colors code. And “soto” is my own avatar nickname, myself as another.
 - A further interesting potential use this map is that, as it is a chronologically dated trace, I could one day being able to backtrack in detail the historical enaction of my thinking as an archeologist, in the same way Foucault speaks about of an “**archaeology of knowledge**” (Foucault, 1969). In this sense, one can also see my use of the “dialogic dialectics” as an archaeological gesture, digging in the implicit and forgotten historical and cultural epistemic soil.
 - Note: There is also a collaborative version of this software.
@@ -246,7 +255,7 @@ A posteriori I could interpret these enacted methodologies and ethical / deontol
 
 My really first finding was the emergence of a trinity aspect of my phenomenological understanding: intellectual **thinking, language and body**. This may seem to an expert a little dumb, but it shows me that while I was striving at my best for not projecting any pre-conceptual categories, or more precisely trying to be conscious of my own projections, these general categories were emerging as meaningful from my eclectic practices. It has given me trust in my (self)knowing process.
 
-[![](https://scybernethics.org/wp-content/uploads/2023/07/3_enacted_domains_and_diagram_1200-1024x700.png)](https://scybernethics.org/wp-content/uploads/2023/07/3_enacted_domains_and_diagram_1200.png)
+[![](Schemas/3_enacted_domains_and_diagram_1200.png)](Schemas/3_enacted_domains_and_diagram_1200.png)
 
 ## 5.3 The enacted quasi-bidimensional formal prototype
 
