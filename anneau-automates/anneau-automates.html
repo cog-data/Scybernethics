@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binary Automaton Ring</title>
+<meta name="description" content="A circular binary cellular automaton — watch Wolfram-class rules evolve on a ring in real time, with sound and interactive controls.">
+<meta property="og:title" content="Binary Automaton Ring">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Circular cellular automaton with real-time evolution, sound synthesis, and interactive controls. Explore Wolfram's rule classes.">
+<meta property="og:image" content="https://soto.earth/ring-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://soto.earth/ring">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Binary Automaton Ring">
+<meta name="twitter:description" content="Watch Wolfram-class cellular automata evolve on a ring — interactive, with sound.">
+<meta name="theme-color" content="#0d0d10">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='none' stroke='%23d4963a' stroke-width='2'/><circle cx='16' cy='16' r='4' fill='%23d4963a' opacity='0.5'/></svg>">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d0d10;color:#c8c8d0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;overflow:hidden;height:100dvh;display:flex;flex-direction:column}
+  h1{font-size:.85rem;font-weight:500;letter-spacing:.08em;color:#b8874a;text-transform:uppercase;opacity:.8}
+  .bar{display:flex;gap:.6rem;align-items:center;padding:.5rem 1.25rem;background:#121215;border-bottom:1px solid #2a2518;flex-wrap:wrap}
+  .bar label{font-size:.65rem;color:#8a7a6a;text-transform:uppercase;letter-spacing:.06em;font-weight:500}
+  .bar input,.bar select{background:#1a1818;border:1px solid #3a3428;color:#c8c8d0;padding:.25rem .5rem;font-family:inherit;font-size:.75rem;border-radius:4px;transition:border-color .15s}
+  .bar input:focus,.bar select:focus{outline:none;border-color:#d4963a}
+  .bar input[type=range]{width:72px;background:transparent;accent-color:#d4963a;height:16px}
+  .bar input[type=range]::-webkit-slider-runnable-track{height:3px;background:#2a2518;border-radius:2px}
+  .bar input[type=range]::-webkit-slider-thumb{appearance:none;width:12px;height:12px;border-radius:50%;background:#d4963a;margin-top:-5px;box-shadow:0 0 6px rgba(212,150,58,.3)}
+  .bar input[type=number]{width:58px}
+  .grp{display:flex;align-items:center;gap:.35rem}
+  button{background:#1e1c18;border:1px solid #3a3428;color:#c8c8d0;padding:.25rem .7rem;font-family:inherit;font-size:.7rem;cursor:pointer;text-transform:uppercase;letter-spacing:.05em;border-radius:4px;transition:all .15s}
+  button:hover{background:#2a2518;border-color:#d4963a;color:#e8d8b8}
+  button.active{background:#2a2010;border-color:#d4963a;color:#f0d8a0;box-shadow:0 0 12px rgba(212,150,58,.15)}
+  .main{display:flex;gap:0;flex:1;min-height:0}
+  .ring-panel{flex:1;position:relative;border-right:1px solid #2a2518;min-width:0;background:radial-gradient(ellipse at center,#100f0e 0%,#0d0d10 70%)}
+  .history-panel{flex:1;position:relative;min-width:0;background:#0b0b0e}
+  .ring-panel canvas{position:absolute;top:0;left:0;width:100%;height:100%;display:block}
+  .history-panel canvas{display:block;width:100%;height:100%}
+  .info{position:absolute;top:50px;right:1rem;font-size:.65rem;color:#6a6258;display:flex;gap:1.5rem;font-weight:400}
+  .info span{display:flex;align-items:center;gap:.3rem}
+  .info .dot{display:inline-block;width:7px;height:7px;border-radius:50%}
+  .info .dot.on{background:#d4963a;box-shadow:0 0 8px #d4963a}
+  .info .dot.off{background:#2a2518;border:1px solid #3a3428}
+  @media(prefers-color-scheme:light){
+    body{background:#f5f3f0;color:#3a3530}
+    .bar{background:#f0ede8;border-color:#d8d0c8}
+    .bar input,.bar select{background:#fff;border-color:#d0c8c0;color:#3a3530}
+    .bar input[type=range]::-webkit-slider-runnable-track{background:#d8d0c8}
+    .bar input[type=range]::-webkit-slider-thumb{background:#c8842a}
+    .ring-panel{background:radial-gradient(ellipse at center,#f8f5f0 0%,#f5f3f0 70%)}
+    .history-panel{background:#f2efe8}
+    .bar label{color:#8a7a6a}
+    h1{color:#b8874a}
+    button{background:#e8e3dc;border-color:#d0c8c0;color:#3a3530}
+    button:hover{background:#ddd5cc;border-color:#c8842a}
+    button.active{background:#e8d8b8;border-color:#c8842a;color:#5a4030}
+    .info{color:#8a7a6a}
+    .info .dot.off{background:#d8d0c8;border-color:#c8c0b8}
+    .ring-panel{border-color:#d8d0c8}
+    .history-panel{background:#f2efe8}
+  }
+  @media(max-width:768px){
+    .main{flex-direction:column;height:auto}
+    .ring-panel{height:45dvh;border-right:none;border-bottom:1px solid #2a2518}
+    .history-panel{height:45dvh}
+    .bar{gap:.4rem;padding:.4rem .75rem}
+    .bar input[type=range]{width:56px}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <h1>◈ Binary Automaton Ring</h1>
+  <div class="grp">
+    <label>Rule</label>
+    <select id="rule"></select>
+  </div>
+  <div class="grp">
+    <label>Cells</label>
+    <input type="number" id="size" value="64" min="16" max="256" step="8">
+  </div>
+  <div class="grp">
+    <label>Speed</label>
+    <input type="range" id="speed" min="1" max="20" value="8">
+  </div>
+  <button id="play" class="active">▶ Pause</button>
+  <button id="step">⏭ Step</button>
+  <button id="random">🎲 Random</button>
+  <button id="clear">◇ Clear</button>
+  <div style="width:.4rem"></div>
+  <span style="font-size:.65rem;letter-spacing:.12em;color:#c8c8d0;font-weight:500;text-transform:uppercase">PERTURBATIONS ›</span>
+  <div class="grp">
+    <label>Intensity:</label>
+    <input type="range" id="pertRate" min="0" max="100" value="10">
+    <span style="font-size:.65rem;color:#8a7a6a;min-width:3ch" id="pertLabel">10%</span>
+  </div>
+  <div class="grp">
+    <label>Rhythm:</label>
+    <span style="font-size:.65rem;color:#8a7a6a;min-width:3ch" id="stimLabel">50%</span>
+    <input type="range" id="stim" min="0" max="200" value="50">
+  </div>
+  <div style="flex:1"></div>
+  <div class="grp">
+    <label>Sound</label>
+    <input type="checkbox" id="sound" checked>
+  </div>
+  <div class="grp">
+    <label>Pitch</label>
+    <input type="range" id="pitch" min="20" max="200" value="75">
+  </div>
+  <div class="grp">
+    <label>Wave</label>
+    <select id="wave">
+      <option value="sawtooth">Saw</option>
+      <option value="sine" selected>Sine</option>
+      <option value="square">Square</option>
+      <option value="triangle">Triangle</option>
+    </select>
+  </div>
+  <div class="grp">
+    <label>Durée</label>
+    <input type="range" id="duration" min="20" max="200" value="80">
+  </div>
+  <div class="grp">
+    <label>Volume</label>
+    <input type="range" id="volume" min="0" max="100" value="40">
+  </div>
+</div>
+
+<div class="main">
+  <div class="ring-panel">
+    <canvas id="ring"></canvas>
+    <div class="info" id="info">
+      <span><span class="dot on"></span> <span id="activeCount">0</span> actives</span>
+      <span>Step <span id="stepCount">0</span></span>
+      <span id="classLabel">—</span>
+      <span><span id="pertCount">0</span> pert</span>
+      <span id="pertParityLabel"></span>
+    </div>
+  </div>
+  <div class="history-panel">
+    <canvas id="history"></canvas>
+    <div class="legend" id="legend"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+// ─── Cellular Automaton Engine ───────────────────────────────────────
+
+const WOLFRAM_RULES = [
+  {n:0,name:'Class I',cls:'I'},{n:32,name:'Class I',cls:'I'},{n:40,name:'Class I',cls:'I'},{n:72,name:'Class I',cls:'I'},
+  {n:4,name:'Class II',cls:'II'},{n:15,name:'Class II',cls:'II'},{n:50,name:'Class II',cls:'II'},{n:54,name:'Class II',cls:'II'},
+  {n:62,name:'Class II',cls:'II'},{n:73,name:'Class II',cls:'II'},{n:94,name:'Class II',cls:'II'},{n:108,name:'Class II',cls:'II'},
+  {n:184,name:'Class II',cls:'II'},{n:222,name:'Class II',cls:'II'},
+  {n:30,name:'Class III',cls:'III'},{n:45,name:'Class III',cls:'III'},{n:60,name:'Class III',cls:'III'},{n:90,name:'Class III',cls:'III'},
+  {n:105,name:'Class III',cls:'III'},{n:106,name:'Class III',cls:'III'},{n:150,name:'Class III',cls:'III'},{n:161,name:'Class III',cls:'III'},
+  {n:110,name:'Class IV',cls:'IV'},{n:41,name:'Class IV',cls:'IV'},{n:54,name:'Class IV',cls:'IV'},{n:124,name:'Class IV',cls:'IV'},
+  {n:193,name:'Class IV',cls:'IV'},{n:218,name:'Class IV',cls:'IV'},
+  {n:0,name:'Rule 0',cls:'I'},{n:4,name:'Rule 4',cls:'II'},{n:30,name:'Rule 30',cls:'III'},{n:41,name:'Rule 41',cls:'IV'},
+  {n:54,name:'Rule 54',cls:'IV'},{n:60,name:'Rule 60',cls:'III'},{n:73,name:'Rule 73',cls:'II'},{n:90,name:'Rule 90',cls:'III'},
+  {n:105,name:'Rule 105',cls:'III'},{n:110,name:'Rule 110',cls:'IV'},{n:124,name:'Rule 124',cls:'IV'},{n:126,name:'Rule 126',cls:'III'},
+  {n:150,name:'Rule 150',cls:'III'},{n:161,name:'Rule 161',cls:'III'},{n:184,name:'Rule 184',cls:'II'},{n:218,name:'Rule 218',cls:'IV'},
+  {n:222,name:'Rule 222',cls:'II'},{n:232,name:'Rule 232',cls:'II'},
+  {n:0,name:'Rule 0 (all off)',cls:'I'},{n:255,name:'Rule 255 (all on)',cls:'I'},{n:204,name:'Rule 204 (stasis)',cls:'I'},
+  {n:110,name:'Rule 110 (universal)',cls:'IV'},{n:30,name:'Rule 30 (chaos)',cls:'III'},  {n:90,name:'Rule 90 (Sierpinski)',cls:'III'},{n:94,name:'Rule 94 (periodic)',cls:'II'},
+  {n:184,name:'Rule 184 (traffic)',cls:'II'},{n:150,name:'Rule 150 (xor)',cls:'III'},
+];
+const JARDIN_RULES = [90,150,105,60,102,54,110,126,30,184,218];
+const CLASS_COLORS = {'I':'#50a070','II':'#6090b0','III':'#c07050','IV':'#a080d0'};
+const PERT_COMPATIBLE = new Set([90,150,105,60,102,54,110,30,126,184,218]);
+
+let cells = [];
+let currentInput = [];
+let size = 64;
+let ruleNum = 126;
+let history = [];
+let maxHistory = 0;
+const MAX_HISTORY_ROWS = 2048;
+
+let running = true;
+let speed = 8;
+let frameId = null;
+
+// Perturbation model (Varela coupling)
+let pertCountdown = 0;        // steps until next perturbation
+let pertLog = [];             // {step,mask,flipped}
+let pertFlash = 0;            // frame counter for visual flash
+let pertTotal = 0;            // total perturbations
+let pertParity = 0;           // parity of total perturbations (0=even,1=odd)
+const PERT_FLASH_DURATION = 180; // ~3s at 60fps
+const PERT_MIN_INTERVAL = 40;    // min internal steps between perturbations
+const PERT_MAX_INTERVAL = 120;   // max internal steps
+
+// ─── DOM ──────────────────────────────────────────────────────────
+
+const ruleSel = document.getElementById('rule');
+const sizeInp = document.getElementById('size');
+const speedInp = document.getElementById('speed');
+const playBtn = document.getElementById('play');
+const stepBtn = document.getElementById('step');
+const randomBtn = document.getElementById('random');
+const clearBtn = document.getElementById('clear');
+const soundCb = document.getElementById('sound');
+const pitchInp = document.getElementById('pitch');
+const waveSel = document.getElementById('wave');
+const durInp = document.getElementById('duration');
+const volInp = document.getElementById('volume');
+const pertRateInp = document.getElementById('pertRate');
+const stimInp = document.getElementById('stim');
+const activeCount = document.getElementById('activeCount');
+const stepCount = document.getElementById('stepCount');
+const classLabel = document.getElementById('classLabel');
+const legendEl = document.getElementById('legend');
+const pertCountEl = document.getElementById('pertCount');
+const pertParityEl = document.getElementById('pertParityLabel');
+
+const ringCanvas = document.getElementById('ring');
+const rctx = ringCanvas.getContext('2d');
+const histCanvas = document.getElementById('history');
+const hctx = histCanvas.getContext('2d');
+
+// ─── Sound Engine ─────────────────────────────────────────────────
+
+let audioCtx = null;
+
+function initAudio(){
+  if(audioCtx) return;
+  try{ audioCtx = new (window.AudioContext || window.webkitAudioContext)(); }catch(e){}
+}
+
+function getAudioParams(){
+  const pitchBase = parseFloat(pitchInp.value) || 55;
+  const waveType = waveSel.value;
+  const durMs = parseFloat(durInp.value) || 80;
+  const vol = (parseFloat(volInp.value) || 40) / 100;
+  return { pitchBase, waveType, durMs, vol };
+}
+
+function playStepSound(active, total){
+  if(!soundCb.checked || !audioCtx) return;
+  if(active === 0) return;
+  const ratio = active / total;
+  const p = getAudioParams();
+  const freq = p.pitchBase * (1 + ratio * 3);
+  const gain = p.vol * (0.3 + ratio * 0.7);
+  const dur = p.durMs / 1000;
+  const now = audioCtx.currentTime;
+  try{
+    const osc = audioCtx.createOscillator();
+    const g = audioCtx.createGain();
+    osc.type = p.waveType;
+    osc.frequency.setValueAtTime(freq, now);
+    g.gain.setValueAtTime(gain, now);
+    g.gain.exponentialRampToValueAtTime(0.001, now + dur);
+    osc.connect(g); g.connect(audioCtx.destination);
+    osc.start(now); osc.stop(now + dur);
+  }catch(e){}
+}
+
+// ─── Ring Renderer ────────────────────────────────────────────────
+
+function drawRing(){
+  const el = ringCanvas.parentElement;
+  const dpr = window.devicePixelRatio || 1;
+  const w = el.clientWidth;
+  const h = el.clientHeight;
+
+  ringCanvas.width = w * dpr; ringCanvas.height = h * dpr;
+  ringCanvas.style.width = w + 'px'; ringCanvas.style.height = h + 'px';
+  rctx.scale(dpr, dpr);
+  const barH = 44;
+  const n = cells.length;
+  if(n===0) return;
+
+  rctx.clearRect(0,0,w,h);
+
+  // ─── helper: draw a cell bar ─────────────────────────────────────
+  function drawBar(y, label, src, color, cGap, rightMargin){
+    rightMargin = rightMargin || 0;
+    const lx = 10;
+    // background strip
+    rctx.fillStyle = '#121115';
+    rctx.fillRect(0, y, w, barH);
+    rctx.fillStyle = '#9a9080';
+    rctx.font = '12px -apple-system,sans-serif';
+    rctx.textAlign = 'left';
+    rctx.textBaseline = 'middle';
+    rctx.fillText(label, lx, y + barH/2);
+    const lw = rctx.measureText(label).width + 24;
+    const cw = Math.max(4, (w - lw - 8 - rightMargin) / n - cGap);
+    const by = y + (barH - cw) / 2;
+    for(let i=0;i<n;i++){
+      const x = lw + i * (cw + cGap);
+      if(x + cw > w - rightMargin) break;
+      if(src[i]){
+        rctx.fillStyle = color;
+        rctx.fillRect(x, by, cw, cw);
+        if(cw > 3){
+          rctx.fillStyle = `rgba(255,255,255,0.15)`;
+          rctx.fillRect(x+1, by+1, cw-2, (cw-2)/2);
+        }
+      } else {
+        rctx.fillStyle = '#1a1815';
+        rctx.fillRect(x, by, cw, cw);
+        rctx.strokeStyle = '#2a2518';
+        rctx.lineWidth = 0.5;
+        rctx.strokeRect(x, by, cw, cw);
+      }
+    }
+  }
+
+  // ─── RANDOM INPUT: shows environmental perturbations ─────
+  const lastPert = pertLog.length > 0 ? pertLog[pertLog.length-1] : null;
+  const pertSource = (pertFlash > 0 && lastPert) ? lastPert.mask : new Array(n).fill(0);
+  const flashRatio = pertFlash / PERT_FLASH_DURATION; // 1 → 0
+  const pertColor = pertFlash > 0
+    ? `rgb(${Math.round(255)},${Math.round(150 + 105 * (1-flashRatio))},${Math.round(50 + 50 * (1-flashRatio))})`
+    : '#2a2518';
+  
+  // reserve right space for flash label
+  let pertRightMargin = 0;
+  if(pertFlash > 0 && lastPert){
+    rctx.font = 'bold 14px -apple-system,sans-serif';
+    pertRightMargin = rctx.measureText(`⚡ hit ${lastPert.flipped} cell${lastPert.flipped>1?'s':''}`).width + 12;
+  }
+  drawBar(0, 'RANDOM SOUP', pertSource, pertColor, 0.5, pertRightMargin);
+  
+  // flash label when perturbation active
+  if(pertFlash > 0 && lastPert){
+    const fade = Math.max(0.3, flashRatio);
+    rctx.fillStyle = `rgba(20,18,16,${0.7 * fade})`;
+    rctx.fillRect(w - pertRightMargin - 6, -1, pertRightMargin + 6, barH + 2);
+    rctx.fillStyle = `rgba(255,180,60,${fade})`;
+    rctx.font = 'bold 14px -apple-system,sans-serif';
+    rctx.textAlign = 'right';
+    rctx.textBaseline = 'middle';
+    rctx.fillText(`⚡ hit ${lastPert.flipped} cell${lastPert.flipped>1?'s':''}`, w - 6, 22);
+  }
+
+  // ring — only reserve space for top bar
+  const availH = h - barH - 12;
+  const ringSize = Math.min(w, availH) * 0.72;
+  const R = ringSize / 2;
+  const cx = w/2, cy = barH + availH/2;
+
+  const active = cells.reduce((a,b)=>a+b,0);
+  const rDot = Math.max(3, Math.min(8, 280/n * 2.5));
+
+  // connections
+  rctx.beginPath();
+  rctx.strokeStyle = '#2a2518';
+  rctx.lineWidth = 1;
+  for(let i=0;i<n;i++){
+    const a1 = 2*Math.PI*i/n - Math.PI/2;
+    const a2 = 2*Math.PI*((i+1)%n)/n - Math.PI/2;
+    rctx.moveTo(cx+R*Math.cos(a1), cy+R*Math.sin(a1));
+    rctx.lineTo(cx+R*Math.cos(a2), cy+R*Math.sin(a2));
+  }
+  rctx.stroke();
+
+  // active links
+  const linkAlpha = 0.04 + 0.08 * (active/n);
+  rctx.beginPath();
+  for(let i=0;i<n;i++){
+    if(!cells[i]) continue;
+    const j = (i+1)%n;
+    if(!cells[j]) continue;
+    const a1 = 2*Math.PI*i/n - Math.PI/2;
+    const a2 = 2*Math.PI*j/n - Math.PI/2;
+    rctx.moveTo(cx+R*Math.cos(a1), cy+R*Math.sin(a1));
+    rctx.lineTo(cx+R*Math.cos(a2), cy+R*Math.sin(a2));
+  }
+  rctx.strokeStyle = `rgba(144,128,224,${linkAlpha*0.5})`;
+  rctx.lineWidth = 2;
+  rctx.stroke();
+
+  // inner glow
+  const glowIntensity = 0.08 + 0.12 * (active/n);
+  const grad = rctx.createRadialGradient(cx,cy,R*0.1, cx,cy,R*0.5);
+  grad.addColorStop(0,`rgba(144,128,224,${glowIntensity*0.6})`);
+  grad.addColorStop(1,'rgba(144,128,224,0)');
+  rctx.fillStyle = grad;
+  rctx.beginPath();
+  rctx.arc(cx,cy,R*0.5,0,2*Math.PI);
+  rctx.fill();
+
+  // cells on ring
+  const f = Math.max(0.3, Math.min(1, active/n * 1.5));
+  for(let i=0;i<n;i++){
+    const a = 2*Math.PI*i/n - Math.PI/2;
+    const x = cx + R*Math.cos(a);
+    const y = cy + R*Math.sin(a);
+    if(cells[i]){
+      rctx.beginPath();
+      rctx.arc(x,y,rDot*1.8,0,2*Math.PI);
+      rctx.fillStyle = `rgba(212,150,58,${f*0.18})`;
+      rctx.fill();
+      rctx.beginPath();
+      rctx.arc(x,y,rDot,0,2*Math.PI);
+      const c1 = Math.round(200 + 55*f);
+      const c2 = Math.round(140 + 40*f);
+      const c3 = Math.round(70 + 30*f);
+      rctx.fillStyle = `rgb(${c1},${c2},${c3})`;
+      rctx.fill();
+      rctx.beginPath();
+      rctx.arc(x,y,rDot*0.45,0,2*Math.PI);
+      rctx.fillStyle = `rgba(255,220,160,${0.6+0.4*f})`;
+      rctx.fill();
+    } else {
+      rctx.beginPath();
+      rctx.arc(x,y,rDot*0.65,0,2*Math.PI);
+      rctx.fillStyle = '#1a1815';
+      rctx.fill();
+      rctx.beginPath();
+      rctx.arc(x,y,rDot*0.35,0,2*Math.PI);
+      rctx.fillStyle = '#2a2518';
+      rctx.fill();
+    }
+  }
+
+  // center text
+  rctx.fillStyle = '#6a6258';
+  rctx.font = `${Math.max(9, Math.min(13, R*0.065))}px -apple-system,sans-serif`;
+  rctx.textAlign = 'center';
+  rctx.textBaseline = 'middle';
+  rctx.fillText(`Rule ${ruleNum} · ${n} cells`, cx, cy+4);
+
+  // OUTPUT bar — positioned below ring bottom edge
+  const ringBottom = cy + R + rDot + 36;
+  const outY = Math.min(h - barH - 4, ringBottom);
+  drawBar(outY, 'OUTPUT', cells, '#9080e0', 0.5);
+
+  activeCount.textContent = active;
+}
+
+// ─── History Renderer ─────────────────────────────────────────────
+
+function drawHistory(){
+  const el = histCanvas.parentElement;
+  const dpr = window.devicePixelRatio || 1;
+  const w = el.clientWidth;
+  const h = el.clientHeight;
+
+  histCanvas.width = w * dpr; histCanvas.height = h * dpr;
+  histCanvas.style.width = w + 'px'; histCanvas.style.height = h + 'px';
+  hctx.scale(dpr, dpr);
+  if(history.length===0 || cells.length===0) return;
+
+  const cols = cells.length;
+  const cw = w / cols;
+  const ch = 3.5;
+  const visibleRows = Math.floor(h / ch);
+  const startRow = Math.max(0, history.length - visibleRows);
+
+  for(let r=0; r<visibleRows; r++){
+    const row = history[startRow + r];
+    if(!row) continue;
+    for(let c=0; c<cols; c++){
+      if(row[c]){
+        const hFade = Math.max(0.15, 1 - r/visibleRows * 0.6);
+        hctx.fillStyle = `rgba(160,140,230,${hFade})`;
+        hctx.fillRect(c*cw, r*ch, cw+0.5, ch+0.5);
+      } else {
+        if(cw>=1.5){
+          hctx.fillStyle = '#0d0d10';
+          hctx.fillRect(c*cw, r*ch, cw+0.5, ch+0.5);
+        }
+      }
+    }
+  }
+  // click prompt (fades as history fills)
+  if(soundCb.checked && !audioCtx && history.length < visibleRows * 0.5){
+    const fade = Math.max(0, 1 - history.length / (visibleRows * 0.5));
+    hctx.fillStyle = `rgba(160,140,230,${fade * 0.7})`;
+    hctx.font = '26px -apple-system,sans-serif';
+    hctx.textAlign = 'center';
+    hctx.textBaseline = 'middle';
+    hctx.fillText('Click anywhere to hear the sound', w/2, h/2);
+  }
+
+  // subtle grid
+  if(cw>=3){
+    hctx.strokeStyle = '#181612';
+    hctx.lineWidth = 0.5;
+    for(let c=0;c<=cols;c++){ hctx.beginPath(); hctx.moveTo(c*cw,0); hctx.lineTo(c*cw,visibleRows*ch); hctx.stroke(); }
+    for(let r=0;r<=visibleRows;r++){ hctx.beginPath(); hctx.moveTo(0,r*ch); hctx.lineTo(w,r*ch); hctx.stroke(); }
+  }
+}
+
+// ─── CA Engine ────────────────────────────────────────────────────
+
+function initCells(){
+  currentInput = new Array(size);
+  for(let i=0;i<size;i++) currentInput[i] = Math.random()<0.5 ? 1 : 0;
+  cells = currentInput.slice();
+  history = [cells.slice()];
+  pertCountdown = PERT_MIN_INTERVAL + Math.floor(Math.random() * (PERT_MAX_INTERVAL - PERT_MIN_INTERVAL));
+  pertLog = [];
+  pertFlash = 0;
+  pertTotal = 0;
+  pertParity = 0;
+  document.getElementById('stepCount').textContent = '0';
+  updateStatus();
+}
+
+function randomize(){
+  initCells();
+  pertCountdown = PERT_MIN_INTERVAL + Math.floor(Math.random() * (PERT_MAX_INTERVAL - PERT_MIN_INTERVAL));
+  pertLog = [];
+  pertFlash = 0;
+  pertTotal = 0;
+  pertParity = 0;
+  renderAll();
+  updateStatus();
+}
+
+function clearAll(){
+  currentInput.fill(0);
+  cells.fill(0);
+  history = [cells.slice()];
+  pertLog = [];
+  pertFlash = 0;
+  pertTotal = 0;
+  pertParity = 0;
+  pertCountdown = PERT_MIN_INTERVAL + Math.floor(Math.random() * (PERT_MAX_INTERVAL - PERT_MIN_INTERVAL));
+  document.getElementById('stepCount').textContent = '0';
+  renderAll();
+  updateStatus();
+}
+
+function step(){
+  const n = cells.length;
+  // apply rule (autonomous internal dynamics)
+  const next = new Array(n);
+  for(let i=0;i<n;i++){
+    const l = cells[(i-1+n)%n];
+    const c = cells[i];
+    const r = cells[(i+1)%n];
+    const idx = (l<<2) | (c<<1) | r;
+    next[i] = (ruleNum >> idx) & 1;
+  }
+  cells = next;
+  
+  // environmental perturbation (coupling with random soup)
+  pertCountdown--;
+  if(pertCountdown <= 0){
+    const stim = parseFloat(stimInp.value) || 50;
+    if(stim > 0){
+      const pertPct = parseFloat(pertRateInp.value) || 10;
+      const maxFlipped = Math.max(1, Math.floor(n * pertPct / 100));
+      const flipped = Math.floor(Math.random() * maxFlipped) + 1; // 1 to pertPct% of cells
+      const mask = new Array(n).fill(0);
+      for(let i=0;i<flipped;i++){
+        const idx = Math.floor(Math.random() * n);
+        cells[idx] = 1 - cells[idx];
+        mask[idx] = 1;
+      }
+      pertLog.push({step:history.length, mask, flipped});
+      pertFlash = PERT_FLASH_DURATION;
+      pertTotal++;
+      pertParity = (pertParity + flipped) % 2;
+      const baseInterval = PERT_MIN_INTERVAL + Math.random() * (PERT_MAX_INTERVAL - PERT_MIN_INTERVAL);
+      pertCountdown = Math.floor(baseInterval * 50 / Math.max(stim, 1));
+    }
+  }
+  
+  // update flash decay
+  if(pertFlash > 0) pertFlash--;
+  
+  history.push(cells.slice());
+  if(history.length > MAX_HISTORY_ROWS) history = history.slice(-MAX_HISTORY_ROWS);
+  document.getElementById('stepCount').textContent = history.length - 1;
+  updateStatus();
+  const active = cells.reduce((a,b)=>a+b,0);
+  playStepSound(active, n);
+  renderAll();
+}
+
+function updateStatus(){
+  const ruleInfo = WOLFRAM_RULES.find(r => r.n === ruleNum);
+  const cls = ruleInfo ? ruleInfo.cls : '—';
+  const clsColor = CLASS_COLORS[cls] || '#6a6258';
+  classLabel.innerHTML = `<span class="dot" style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${clsColor};box-shadow:0 0 6px ${clsColor}"></span> Class ${cls}`;
+  pertCountEl.textContent = pertTotal;
+  const parityLabel = pertTotal > 0 ? (pertParity === 0 ? 'even' : 'odd') : '';
+  pertParityEl.textContent = parityLabel ? (pertParity === 0 ? '⬡ even' : '⬢ odd') : '';
+}
+
+// ─── Render All ───────────────────────────────────────────────────
+
+function renderAll(){
+  drawRing();
+  drawHistory();
+}
+
+// ─── Controls ──────────────────────────────────────────────────────
+
+function togglePlay(){
+  running = !running;
+  playBtn.textContent = running ? '▶ Pause' : '▶ Play';
+  playBtn.classList.toggle('active', running);
+}
+
+function setRule(n){
+  ruleNum = n;
+  ruleSel.value = n;
+  history = [cells.slice()];
+  document.getElementById('stepCount').textContent = '0';
+  updateStatus();
+  renderAll();
+}
+
+function populateRules(){
+  const seen = new Set();
+  const unique = WOLFRAM_RULES.filter(r => { if(seen.has(r.n)) return false; seen.add(r.n); return true; });
+  unique.sort((a,b)=>a.n-b.n);
+  ruleSel.innerHTML = '';
+  for(const r of unique){
+    const opt = document.createElement('option');
+    opt.value = r.n;
+    const clsLabel = r.cls ? ` [${r.cls}]` : '';
+    const pertMark = PERT_COMPATIBLE.has(r.n) ? ' ⚡' : '';
+    opt.textContent = `Rule ${r.n}${clsLabel}${pertMark} — ${r.name}`;
+    ruleSel.appendChild(opt);
+  }
+  ruleSel.value = ruleNum;
+}
+
+// ─── Resize ────────────────────────────────────────────────────────
+
+let resizeTimer;
+function onResize(){
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => renderAll(), 100);
+}
+
+// ─── Init ──────────────────────────────────────────────────────────
+
+function init(){
+  populateRules();
+  size = parseInt(sizeInp.value) || 64;
+  initCells();
+
+  ruleSel.addEventListener('change', () => {
+    setRule(parseInt(ruleSel.value));
+  });
+  sizeInp.addEventListener('change', () => {
+    size = parseInt(sizeInp.value) || 64;
+    if(size<16) size=16; if(size>256) size=256;
+    sizeInp.value = size;
+    initCells();
+    maxHistory = 0;
+    renderAll();
+  });
+  speedInp.addEventListener('input', () => { speed = parseInt(speedInp.value); });
+  pertRateInp.addEventListener('input', () => { document.getElementById('pertLabel').textContent = pertRateInp.value; });
+  stimInp.addEventListener('input', () => { document.getElementById('stimLabel').textContent = stimInp.value; });
+  playBtn.addEventListener('click', togglePlay);
+  stepBtn.addEventListener('click', () => { if(!running){ step(); } });
+  randomBtn.addEventListener('click', randomize);
+  clearBtn.addEventListener('click', clearAll);
+
+  window.addEventListener('resize', onResize);
+
+  // animation loop
+  let lastTime = 0;
+  function loop(time){
+    if(running){
+      const interval = Math.max(30, 600 / speed);
+      if(time - lastTime >= interval){
+        step();
+        lastTime = time;
+      }
+    }
+    frameId = requestAnimationFrame(loop);
+  }
+
+  // init audio on first interaction
+  document.addEventListener('click', () => { initAudio(); }, {once:true});
+
+  renderAll();
+  updateStatus();
+  frameId = requestAnimationFrame(loop);
+}
+
+document.addEventListener('DOMContentLoaded', init);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binary Automaton Ring — Autonomy &amp; Perturbation</title>
+<meta name="description" content="An interactive exploration of Varela's ring of Boolean automata: self-organisation through operational closure and environmental perturbation.">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:#0d0d10;
+    color:#c0b8b0;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;
+    line-height:1.7;
+    font-size:15px;
+    overflow-x:hidden;
+  }
+  .page{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem}
+  h1{
+    font-size:1.1rem;
+    font-weight:500;
+    letter-spacing:.1em;
+    color:#d4963a;
+    text-transform:uppercase;
+    margin-bottom:.25rem;
+  }
+  .subtitle{
+    font-size:.85rem;
+    color:#7a7268;
+    margin-bottom:2rem;
+    border-bottom:1px solid #2a2518;
+    padding-bottom:1rem;
+  }
+  .subtitle a{color:#b8874a;text-decoration:none}
+  .subtitle a:hover{color:#d4963a}
+  h2{
+    font-size:.9rem;
+    font-weight:500;
+    letter-spacing:.06em;
+    color:#b8874a;
+    text-transform:uppercase;
+    margin:2rem 0 .6rem;
+  }
+  p{margin-bottom:1rem;color:#b0a89e}
+  p strong{color:#d0c8b8}
+  .ref{
+    font-size:.8rem;
+    color:#6a6258;
+    border-left:2px solid #2a2518;
+    padding-left:1rem;
+    margin:1.2rem 0;
+  }
+  .app-wrap{
+    position:relative;
+    width:100%;
+    border:1px solid #2a2518;
+    border-radius:6px;
+    overflow:hidden;
+    margin:2rem 0;
+    background:#0d0d10;
+  }
+  .app-wrap iframe{
+    display:block;
+    width:100%;
+    height:calc(100dvh - 120px);
+    min-height:500px;
+    border:none;
+  }
+  .rule-note{
+    font-size:.8rem;
+    color:#5a5248;
+    margin-top:.3rem;
+    font-style:italic;
+  }
+  ul{list-style:none;margin:0 0 1rem}
+  ul li{
+    padding:.2rem 0 .2rem 1.2rem;
+    position:relative;
+    color:#a09888;
+    font-size:.9rem;
+  }
+  ul li::before{content:'— ';color:#4a4438;position:absolute;left:0}
+  .tags{margin-top:2rem;padding-top:1rem;border-top:1px solid #2a2518;font-size:.75rem;color:#5a5248}
+  .tags span{display:inline-block;margin-right:.6rem;color:#6a6258}
+  @media(max-width:720px){
+    .page{padding:1.2rem 1rem}
+    h1{font-size:1rem}
+    .app-wrap iframe{height:60dvh;min-height:400px}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<h1>Binary Automaton Ring</h1>
+<div class="subtitle">
+  Autonomy, operational closure &amp; perturbation coupling<br>
+  After Humberto Maturana, Francisco Varela &amp; Heinz von Foerster
+</div>
+
+<p>
+  This interactive application demonstrates a concept that appears in the French edition of Francisco Varela's <em>Principles of Biological Autonomy</em> (1979, translated as <em>Principes d'autonomie biologique</em>, 1989): a ring of Boolean automata, closed on itself, coupled with a random environment. Notably, this specific model is absent from the original English text — it may have been added for the French edition. It is a concrete illustration of how <strong>operational closure</strong> — the circular organisation of a system — can produce <strong>order from noise</strong> (von Foerster).
+</p>
+
+<h2>The model</h2>
+<p>
+  A ring of <em>N</em> binary cells is arranged in a circle. Each cell's next state is determined by a local rule that depends on its own state and those of its immediate neighbours — the classic one-dimensional cellular automaton, but on a circular topology that closes the system on itself.
+</p>
+<p>
+  The ring evolves autonomously, without any external input, following its internal rule. Its behaviour arises <strong>from its own organisation</strong>, not from a program or external signal.
+</p>
+
+<figure style="margin:1.5rem 0;text-align:center">
+  <img src="Annular_Cellular_Automata.png" alt="Diagram of the annular cellular automaton from the French edition of Principles of Biological Autonomy" style="max-width:100%;height:auto;border:1px solid #2a2518;border-radius:4px">
+  <figcaption style="font-size:.75rem;color:#6a6258;margin-top:.4rem">«&nbsp;Description d'un automate annulaire&nbsp;» — from the French edition of <em>Principles of Biological Autonomy</em> (1989, p.&nbsp;218). The ring topology, the coupling mechanism with the random soup, and the output trace are shown schematically.</figcaption>
+</figure>
+
+<figure style="margin:0 0 1.5rem;text-align:center">
+  <img src="Wolfram_automata.png" alt="Wolfram cellular automaton history — typical triangular patterns" style="max-width:100%;height:auto;border:1px solid #2a2518;border-radius:4px">
+  <figcaption style="font-size:.75rem;color:#6a6258;margin-top:.4rem">A Wolfram-class cellular automaton history (Rule&nbsp;90). The triangular patterns emerge from a single seed — the same dynamics that, on a ring topology and under perturbation, produce the parity distinction described by Varela.</figcaption>
+</figure>
+
+<h2>Coupling with the environment</h2>
+<p>
+  Varela then asks: what happens if the ring is placed in a random soup of bits and occasionally collides with a 0 or a 1? The ring becomes <strong>structurally coupled</strong> to its environment: every so often, a discrete perturbation flips a small fraction of its cells, and the ring's closure then "digests" the disturbance.
+</p>
+<p>
+  The key finding (p.&nbsp;219 of the French edition, <em>Principes d'autonomie biologique</em>, 1989 — this passage does not appear in the original English text of 1979):
+</p>
+<div class="ref">
+  «&nbsp;When it is coupled with a random soup of 0s and&nbsp;1s, this particular ring can generate a distinction between specific subsequences — here, the distinction between even and odd subsequences. This distinction was not programmed. It results from the history of the system's coupling. Moreover, it creates a meaning that did not exist before, since we started from a random universe. From this chaos, the system can, through its operational closure, generate a distinction inseparable from its own operation.&nbsp;»
+</div>
+
+<h2>Interface overview</h2>
+<p>
+  The application has many moving parts — lights, sounds, sliders — which can be disorienting at first glance. Here is a quick visual map:
+</p>
+<ul>
+  <li><strong>Top bar (orange):</strong> the random soup of bits that the ring is coupled with. Each orange flash is a perturbation hitting the ring.</li>
+  <li><strong>Left ring (orange):</strong> the automaton ring itself — active cells in orange, inactive in dark grey. You can see its state evolve here.</li>
+  <li><strong>Bottom trace (violet):</strong> the ring's output after "digesting" a perturbation — how its internal dynamics reorganise the disturbance.</li>
+  <li><strong>Right history (violet):</strong> a scrolling log of each perturbation and the ring's response — the measurable trace of the coupling history between ring and environment.</li>
+  <li><strong>Top controls:</strong> all parameters — rule, cells, speed, perturbation settings, sound — are adjustable while running. Change them freely.</li>
+</ul>
+<p>
+  Start by just watching the ring run. Let your eye follow the orange cells, then glance at the violet output when a flash occurs. The controls will make more sense once you see what they affect.
+</p>
+
+<h2>What to observe</h2>
+<ul>
+  <li><strong>Autonomous regime:</strong> between perturbations, the ring evolves deterministically. Depending on the rule, it may stabilise, oscillate, or produce complex patterns.</li>
+  <li><strong>Perturbation:</strong> a random hit flips a fraction of the cells (Intensity slider, 0–100%). Watch the orange flash on the top bar. The Rhythm slider controls how often hits occur.</li>
+  <li><strong>Reaction:</strong> the ring may return to its previous configuration (even number of hits), bifurcate to a new attractor (odd), or absorb the perturbation and continue largely unchanged — depending on its internal state at the moment of impact.</li>
+  <li><strong>Emergence:</strong> the parity distinction is not built into the system. It is enacted through the history of coupling — a form of <em>sense-making</em> at the most elementary level.</li>
+</ul>
+
+<h2>Controls</h2>
+<ul>
+  <li><strong>Rule:</strong> select the Wolfram rule. Rules marked with ⚡ show especially rich perturbation dynamics (many others do too — experiment).</li>
+  <li><strong>Cells:</strong> ring size (16–256).</li>
+  <li><strong>Perturbation:</strong> <em>Intensity</em> controls what percentage of cells may be flipped per hit (0–100%; set to 0% for a purely closed system). <em>Rhythm</em> controls how often hits occur (50% = default rate).</li>
+  <li><strong>Speed / Step / Random / Clear:</strong> standard controls for the CA engine.</li>
+  <li><strong>Sound:</strong> sonification of the ring's activity. Pitch, wave shape, duration, and volume are adjustable.</li>
+</ul>
+
+<h2>Roots</h2>
+<p>
+  This model belongs to the lineage of second-order cybernetics and the biology of cognition:
+</p>
+<ul>
+  <li>Heinz von Foerster — <em>On Self-Organising Systems and Their Environments</em> (1960) — order from noise.</li>
+  <li>Humberto Maturana &amp; Francisco Varela — <em>Autopoiesis and Cognition</em> (1973, 1980) — the organisation of the living as operational closure.</li>
+  <li>Francisco Varela — <em>Principles of Biological Autonomy</em> (1979, English) / <em>Principes d'autonomie biologique</em> (1989, French expanded edition) — the ring of Boolean automata appears only in the French edition as a minimal model of autonomy and sense-making through perturbation coupling.</li>
+  <li>Stephen Wolfram — <em>Universality and Complexity in Cellular Automata</em> (1984) — the rule space within which these rings operate.</li>
+</ul>
+
+<div style="background:#1a1510;border:1px solid #2a2518;border-radius:4px;padding:.8rem 1rem;margin:1.5rem 0;font-size:.82rem;color:#a09888">
+  ⏺ Click inside the application to activate sound (browser autoplay policy).
+</div>
+
+<div class="app-wrap">
+  <iframe src="anneau-automates.html" title="Binary Automaton Ring"></iframe>
+</div>
+
+<p>
+  <strong>Try it:</strong> start with <strong>Rule 126</strong> (default) and observe how triangles emerge from the random soup and resist perturbations. Then explore Rule 94 (from stillness to near-chaos), Rule 90 (Sierpinski triangles), or Rule 150 (travelling particles). Lower the rhythm to let the ring settle; increase it to push it into a regime of continuous novelty.
+</p>
+
+<div class="tags">
+  <span>second-order cybernetics</span> <span>autopoiesis</span> <span>operational closure</span> <span>order from noise</span> <span>Varela</span> <span>von Foerster</span> <span>cellular automaton</span> <span>sense-making</span>
+</div>
+
+</div>
+</body>
+</html>
